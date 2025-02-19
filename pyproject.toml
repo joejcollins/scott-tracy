@@ -1,0 +1,13 @@
+[project]
+name = "helheim"
+version = "0.1.0"
+description = "The realm of the dead where those who die a dishonorable death are forced to remain."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ipykernel",
+    "ipympl",
+    "matplotlib",
+    "numpy",
+    "debugpy",
+]
