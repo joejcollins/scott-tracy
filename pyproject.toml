@@ -2,7 +2,13 @@
 name = "helheim"
 version = "0.1.0"
 description = "The realm of the dead where those who die a dishonorable death are forced to remain."
+authors = [{ name = "Earth Rover Program" }]
+license = { file = "LICENSE" }
 readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+]
 requires-python = ">=3.12"
 dependencies = [
     "ipykernel",
@@ -10,4 +16,10 @@ dependencies = [
     "matplotlib",
     "numpy",
     "debugpy",
+    "matplotlib",
+    "mkdocs",
+    "pytest",
+    "sourcery.sourcery",
 ]
+[project.urls]
+repository = "https://github.com/earthroverprogram/helheim"

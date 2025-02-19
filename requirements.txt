@@ -2,6 +2,8 @@
 #    uv pip compile pyproject.toml --python .venv/bin/python --output-file=requirements.txt
 asttokens==3.0.0
     # via stack-data
+click==8.1.8
+    # via mkdocs
 comm==0.2.2
     # via
     #   ipykernel
@@ -20,6 +22,8 @@ executing==2.2.0
     # via stack-data
 fonttools==4.56.0
     # via matplotlib
+ghp-import==2.1.0
+    # via mkdocs
 ipykernel==6.29.5
     # via helheim (pyproject.toml)
 ipympl==0.9.6
@@ -33,6 +37,8 @@ ipywidgets==8.1.5
     # via ipympl
 jedi==0.19.2
     # via ipython
+jinja2==3.1.5
+    # via mkdocs
 jupyter-client==8.6.3
     # via ipykernel
 jupyter-core==5.7.2
@@ -43,6 +49,12 @@ jupyterlab-widgets==3.0.13
     # via ipywidgets
 kiwisolver==1.4.8
     # via matplotlib
+markdown==3.7
+    # via mkdocs
+markupsafe==3.0.2
+    # via
+    #   jinja2
+    #   mkdocs
 matplotlib==3.10.0
     # via
     #   helheim (pyproject.toml)
@@ -51,6 +63,14 @@ matplotlib-inline==0.1.7
     # via
     #   ipykernel
     #   ipython
+mergedeep==1.3.4
+    # via
+    #   mkdocs
+    #   mkdocs-get-deps
+mkdocs==1.6.1
+    # via helheim (pyproject.toml)
+mkdocs-get-deps==0.2.0
+    # via mkdocs
 nest-asyncio==1.6.0
     # via ipykernel
 numpy==2.2.3
@@ -63,8 +83,11 @@ packaging==24.2
     # via
     #   ipykernel
     #   matplotlib
+    #   mkdocs
 parso==0.8.4
     # via jedi
+pathspec==0.12.1
+    # via mkdocs
 pexpect==4.9.0
     # via ipython
 pillow==11.1.0
@@ -72,7 +95,9 @@ pillow==11.1.0
     #   ipympl
     #   matplotlib
 platformdirs==4.3.6
-    # via jupyter-core
+    # via
+    #   jupyter-core
+    #   mkdocs-get-deps
 prompt-toolkit==3.0.50
     # via ipython
 psutil==7.0.0
@@ -87,8 +112,16 @@ pyparsing==3.2.1
     # via matplotlib
 python-dateutil==2.9.0.post0
     # via
+    #   ghp-import
     #   jupyter-client
     #   matplotlib
+pyyaml==6.0.2
+    # via
+    #   mkdocs
+    #   mkdocs-get-deps
+    #   pyyaml-env-tag
+pyyaml-env-tag==0.1
+    # via mkdocs
 pyzmq==26.2.1
     # via
     #   ipykernel
@@ -111,6 +144,8 @@ traitlets==5.14.3
     #   jupyter-client
     #   jupyter-core
     #   matplotlib-inline
+watchdog==6.0.0
+    # via mkdocs
 wcwidth==0.2.13
     # via prompt-toolkit
 widgetsnbextension==4.0.13
