@@ -16,11 +16,17 @@ def test_dummy_addition() -> None:
 
 def test_addition():
     """A dummy test to check if addition works."""
+    # Arrange
+
+    # Assert
     assert 1 + 1 == 2
 
 
 def test_string_concatenation():
     """A dummy test to check if string concatenation works."""
+    # Arrange
+
+    # Assert
     assert "Hello, " + "world!" == "Hello, world!"
 
 
