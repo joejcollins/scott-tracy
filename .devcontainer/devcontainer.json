@@ -12,6 +12,7 @@
 				"python.terminal.activateEnvironment": true
 			},
 			"extensions": [
+				"charliermarsh.ruff",
 				"ms-toolsai.jupyter",
 				"ms-python.python",
 				"ms-python.vscode-python-envs",

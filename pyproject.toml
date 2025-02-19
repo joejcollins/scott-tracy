@@ -11,16 +11,32 @@ classifiers = [
 ]
 requires-python = ">=3.12"
 dependencies = [
+    "debugpy",
     "ipykernel",
     "ipympl",
+    "loguru",
     "matplotlib",
-    "numpy",
-    "debugpy",
     "matplotlib",
     "mkdocs",
-    "pytest",
-    "sourcery",
+    "numpy",
     "pre-commit",
+    "python-dotenv",
+    "pytest",
+    "pytest-cov",
+    "ruff",
+    "sourcery",
+    "tqdm",
 ]
 [project.urls]
 repository = "https://github.com/earthroverprogram/helheim"
+
+[tool.pytest.ini_options]
+log_cli = false
+addopts = "-q --disable-warnings --cache-clear"
+testpaths = ["./tests"]
+
+[tool.ruff]
+lint.select = ["F", "E", "W", "C90", "I", "PL", "D"]
+lint.ignore = ["D203", "D213"]
+lint.fixable = ["ALL"]
+line-length = 110
