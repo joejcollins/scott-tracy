@@ -8,8 +8,8 @@ clean: # Remove the environment.
 	find . -type f -name "*.py[co]" -delete -or -type d -name "__pycache__" -delete
 
 lock:  # Create the lock file and requirements file.
-	rm -f requirements.*
-	uv pip compile pyproject.toml --python .venv/bin/python --output-file=requirements.txt
+	rm -f requirements.txt
+	uv pip compile pyproject.toml --python .venv/bin/python --output-file=requirements.txt  requirements.in
 
 .PHONY: help
 help: # Show help for each of the makefile recipes.
