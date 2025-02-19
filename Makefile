@@ -7,6 +7,12 @@ clean: # Remove the environment.
 	find . -name "*.pyc" -exec rm -f {} \;
 	find . -type f -name "*.py[co]" -delete -or -type d -name "__pycache__" -delete
 
+docs: # Build the documentation.
+	cd docs && mkdocs build
+
+docs-serve: # Serve the documention.
+	cd docs && mkdocs serve
+
 lock:  # Create the lock file and requirements file.
 	rm -f requirements.txt
 	uv pip compile pyproject.toml --python .venv/bin/python --output-file=requirements.txt  requirements.in

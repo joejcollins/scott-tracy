@@ -4,6 +4,14 @@
     # via -r requirements.in
 asttokens==3.0.0
     # via stack-data
+attrs==25.1.0
+    # via
+    #   jsonschema
+    #   referencing
+beautifulsoup4==4.13.3
+    # via nbconvert
+bleach==6.2.0
+    # via nbconvert
 cfgv==3.4.0
     # via pre-commit
 click==8.1.8
@@ -25,10 +33,14 @@ debugpy==1.8.12
     #   ipykernel
 decorator==5.1.1
     # via ipython
+defusedxml==0.7.1
+    # via nbconvert
 distlib==0.3.9
     # via virtualenv
 executing==2.2.0
     # via stack-data
+fastjsonschema==2.21.1
+    # via nbformat
 filelock==3.17.0
     # via virtualenv
 fonttools==4.56.0
@@ -57,13 +69,26 @@ ipywidgets==8.1.5
 jedi==0.19.2
     # via ipython
 jinja2==3.1.5
-    # via mkdocs
+    # via
+    #   mkdocs
+    #   nbconvert
+jsonschema==4.23.0
+    # via nbformat
+jsonschema-specifications==2024.10.1
+    # via jsonschema
 jupyter-client==8.6.3
-    # via ipykernel
+    # via
+    #   ipykernel
+    #   nbclient
 jupyter-core==5.7.2
     # via
     #   ipykernel
     #   jupyter-client
+    #   nbclient
+    #   nbconvert
+    #   nbformat
+jupyterlab-pygments==0.3.0
+    # via nbconvert
 jupyterlab-widgets==3.0.13
     # via ipywidgets
 kiwisolver==1.4.8
@@ -78,6 +103,7 @@ markupsafe==3.0.2
     # via
     #   jinja2
     #   mkdocs
+    #   nbconvert
 matplotlib==3.10.0
     # via
     #   helheim (pyproject.toml)
@@ -91,12 +117,24 @@ mergedeep==1.3.4
     # via
     #   mkdocs
     #   mkdocs-get-deps
+mistune==3.1.2
+    # via nbconvert
 mkdocs==1.6.1
     # via
     #   helheim (pyproject.toml)
     #   helheim
 mkdocs-get-deps==0.2.0
     # via mkdocs
+nbclient==0.10.2
+    # via nbconvert
+nbconvert==7.16.6
+    # via
+    #   helheim (pyproject.toml)
+    #   helheim
+nbformat==5.10.4
+    # via
+    #   nbclient
+    #   nbconvert
 nest-asyncio==1.6.0
     # via ipykernel
 nodeenv==1.9.1
@@ -113,7 +151,10 @@ packaging==24.2
     #   ipykernel
     #   matplotlib
     #   mkdocs
+    #   nbconvert
     #   pytest
+pandocfilters==1.5.1
+    # via nbconvert
 parso==0.8.4
     # via jedi
 pathspec==0.12.1
@@ -144,7 +185,9 @@ ptyprocess==0.7.0
 pure-eval==0.2.3
     # via stack-data
 pygments==2.19.1
-    # via ipython
+    # via
+    #   ipython
+    #   nbconvert
 pyparsing==3.2.1
     # via matplotlib
 pytest==8.3.4
@@ -177,18 +220,30 @@ pyzmq==26.2.1
     # via
     #   ipykernel
     #   jupyter-client
+referencing==0.36.2
+    # via
+    #   jsonschema
+    #   jsonschema-specifications
+rpds-py==0.22.3
+    # via
+    #   jsonschema
+    #   referencing
 ruff==0.9.6
     # via
     #   helheim (pyproject.toml)
     #   helheim
 six==1.17.0
     # via python-dateutil
+soupsieve==2.6
+    # via beautifulsoup4
 sourcery==1.34.0
     # via
     #   helheim (pyproject.toml)
     #   helheim
 stack-data==0.6.3
     # via ipython
+tinycss2==1.4.0
+    # via bleach
 tornado==6.4.2
     # via
     #   ipykernel
@@ -207,11 +262,22 @@ traitlets==5.14.3
     #   jupyter-client
     #   jupyter-core
     #   matplotlib-inline
+    #   nbclient
+    #   nbconvert
+    #   nbformat
+typing-extensions==4.12.2
+    # via
+    #   beautifulsoup4
+    #   referencing
 virtualenv==20.29.2
     # via pre-commit
 watchdog==6.0.0
     # via mkdocs
 wcwidth==0.2.13
     # via prompt-toolkit
+webencodings==0.5.1
+    # via
+    #   bleach
+    #   tinycss2
 widgetsnbextension==4.0.13
     # via ipywidgets
