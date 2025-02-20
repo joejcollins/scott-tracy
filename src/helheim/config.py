@@ -1,3 +1,10 @@
+"""Configuration file for the helheim project.
+
+This file defines various paths and settings used throughout the project.
+It also initializes logging and handles optional integration with tqdm.
+"""
+
+import contextlib
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -23,10 +30,8 @@ FIGURES_DIR = REPORTS_DIR / "figures"
 
 # If tqdm is installed, configure loguru with tqdm.write
 # https://github.com/Delgan/loguru/issues/135
-try:
+with contextlib.suppress(ModuleNotFoundError):
     from tqdm import tqdm
 
     logger.remove(0)
     logger.add(lambda msg: tqdm.write(msg, end=""), colorize=True)
-except ModuleNotFoundError:
-    pass
