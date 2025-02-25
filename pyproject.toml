@@ -27,6 +27,7 @@ dependencies = [
     "ruff",
     "sourcery",
     "tqdm",
+    "types-tqdm",
 ]
 [project.urls]
 repository = "https://github.com/earthroverprogram/helheim"

@@ -23,7 +23,7 @@ help: # Show help for each of the makefile recipes.
 
 report:  # Report the python version and pip list.
 	.venv/bin/python --version
-	.venv/bin/python -m pip list -v
+	uv pip list -v
 
 test:  # Run the unit tests.
 	.venv/bin/pytest ./tests --verbose --color=yes

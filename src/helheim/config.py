@@ -10,11 +10,13 @@ from pathlib import Path
 from dotenv import load_dotenv
 from loguru import logger
 
+from helheim.helpers import file_finder_service
+
 # Load environment variables from .env file if it exists
 load_dotenv()
 
 # Paths
-PROJ_ROOT = Path(__file__).resolve().parents[1]
+PROJ_ROOT = Path(file_finder_service.FileFinderService().find_root())
 logger.info(f"PROJ_ROOT path is: {PROJ_ROOT}")
 
 DATA_DIR = PROJ_ROOT / "data"
