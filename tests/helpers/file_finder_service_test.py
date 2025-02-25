@@ -1,4 +1,4 @@
-""""""
+"""File finder service, to find the project root."""
 
 from helheim.helpers import file_finder_service
 

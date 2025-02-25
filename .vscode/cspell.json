@@ -3,7 +3,11 @@
     "language": "en",
     "words": [
         "abcdefghijklmnopqrstuvwxyz",
+        "debugpy",
         "dotenv",
-        "helheim"
+        "helheim",
+        "mypy",
+        "pycache",
+        "pyright"
     ]
 }
