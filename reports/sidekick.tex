@@ -1,0 +1,52 @@
+\documentclass[12pt, a4paper]{article}
+\renewcommand{\familydefault}{\sfdefault} % so it doesn't look like LaTeX
+\usepackage{helvet}
+\usepackage{tikz} % to print out the dots
+\usepackage[left=1cm, right=1cm, top=1.3cm, bottom=1cm]{geometry}
+\usepackage{xcolor}
+\color{gray}
+\usepackage{amssymb} % for \square and \checked commands
+\usepackage{multido} % to repeat the todo list
+\usepackage{setspace} % to set the space between the todo list items
+\usepackage{rotating} % to rotate the second sidekick page for printing
+
+\begin{document}
+\pagestyle{empty}
+\setlength\parindent{0pt}
+
+\newcommand{\sidekick}{
+\begin{minipage}[t]{\linewidth}
+
+    \vspace{0.25cm}
+
+    \begin{minipage}{.60\linewidth}
+      \framebox[0.98\linewidth][b]{\scalebox{2}{$\square$}\hfill}
+    \end{minipage}%
+    \hfil
+    \begin{minipage}{.40\linewidth}
+      \framebox[\linewidth][b]{\scalebox{2}{$\square$}\hfill}
+    \end{minipage}
+
+    \vspace{0.5cm}
+
+    \begin{minipage}{.60\linewidth}
+        \begin{tikzpicture}%
+        \foreach \x in {0,0.5,...,11}
+          \foreach \y in {0,0.5,...,11}
+            \fill (\x cm,\y cm) circle (1pt);
+        \end{tikzpicture}
+    \end{minipage}%
+    \hfil
+    \begin{minipage}{.40\linewidth}
+        \setstretch{2}
+        \multido{}{11}{\framebox[\linewidth][b]{\scalebox{2}{$\square$}\hfill} }
+    \end{minipage}
+    \end{minipage}
+}
+
+\sidekick
+\vfil
+\rotatebox[origin=c]{180}{
+  \sidekick
+}
+\end{document}
