@@ -27,7 +27,7 @@ report:  # Report the python version and pip list.
 
 test:  # Run the unit tests.
 	.venv/bin/pytest ./tests --verbose --color=yes
-	.venv/bin/pytest --cov=helheim --cov-fail-under=80
+	.venv/bin/pytest --cov=nidavellir --cov-fail-under=80
 
 venv:  # Create the virtual environment.
 	uv venv .venv

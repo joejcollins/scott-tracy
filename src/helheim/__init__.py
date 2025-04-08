@@ -1,1 +1,1 @@
-from helheim import config  # noqa: F401
+from nidavellir import config  # noqa: F401

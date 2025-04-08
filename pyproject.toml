@@ -1,5 +1,5 @@
 [project]
-name = "helheim"
+name = "nidavellir"
 version = "0.1.0"
 description = "The realm of the dead where those who die a dishonorable death are forced to remain."
 authors = [{ name = "Earth Rover Program" }]
@@ -30,7 +30,7 @@ dependencies = [
     "types-tqdm",
 ]
 [project.urls]
-repository = "https://github.com/earthroverprogram/helheim"
+repository = "https://github.com/earthroverprogram/nidavellir"
 
 [tool.pytest.ini_options]
 log_cli = false
@@ -44,7 +44,7 @@ lint.fixable = ["ALL"]
 line-length = 88
 
 [[tool.mypy.overrides]]
-module = ["helheim.*"]
+module = ["nidavellir.*"]
 follow_untyped_imports = true
 
 [tool.pyright]

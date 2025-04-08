@@ -12,5 +12,5 @@ RUN apt-get --quiet update \
  && rm -rf /var/lib/apt/lists/*
 
 # Add some labels so it looks nice in Github packages.
-LABEL org.opencontainers.image.source=https://github.com/earthroverprogram/helheim
-LABEL org.opencontainers.image.description="helheim image."
+LABEL org.opencontainers.image.source=https://github.com/earthroverprogram/nidavellir
+LABEL org.opencontainers.image.description="nidavellir image."

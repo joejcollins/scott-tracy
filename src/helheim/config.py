@@ -1,4 +1,4 @@
-"""Configuration file for the helheim project.
+"""Configuration file for the nidavellir project.
 
 This file defines various paths and settings used throughout the project.
 It also initializes logging and handles optional integration with tqdm.
@@ -10,7 +10,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 from loguru import logger
 
-from helheim.helpers import file_finder_service
+from nidavellir.helpers import file_finder_service
 
 # Load environment variables from .env file if it exists
 load_dotenv()
