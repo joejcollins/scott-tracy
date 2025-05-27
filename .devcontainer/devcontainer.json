@@ -14,7 +14,6 @@
 				"charliermarsh.ruff",
 				"ms-toolsai.jupyter",
 				"ms-python.python",
-				"ms-python.vscode-python-envs",
 				"sourcery.sourcery",
 				"tamasfe.even-better-toml"
 			]
