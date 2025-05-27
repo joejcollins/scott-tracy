@@ -1,8 +1,8 @@
 [project]
-name = "nidavellir"
-version = "0.1.0"
-description = "The realm of the dead where those who die a dishonorable death are forced to remain."
-authors = [{ name = "Earth Rover Program" }]
+name = "scott_tracy"
+version = "0.0.1"
+description = "Pilot of the swing-wing rocket-plane Thunderbird 1."
+authors = [ { name = "Joe J Collins", email = "joejcollins@gmail.com" },]
 license = { file = "LICENSE" }
 readme = "README.md"
 classifiers = [
@@ -15,11 +15,7 @@ dependencies = [
     "ipykernel",
     "ipympl",
     "loguru",
-    "matplotlib",
-    "matplotlib",
     "mkdocs",
-    "nbconvert",
-    "numpy",
     "pre-commit",
     "python-dotenv",
     "pytest",
@@ -29,8 +25,9 @@ dependencies = [
     "tqdm",
     "types-tqdm",
 ]
+
 [project.urls]
-repository = "https://github.com/earthroverprogram/nidavellir"
+repository = "https://github.com/earthroverprogram/scott-tracy"
 
 [tool.pytest.ini_options]
 log_cli = false
@@ -43,8 +40,11 @@ lint.ignore = ["D203", "D213"]
 lint.fixable = ["ALL"]
 line-length = 88
 
+[tool.uv]
+package = true
+
 [[tool.mypy.overrides]]
-module = ["nidavellir.*"]
+module = ["scott_tracy.*"]
 follow_untyped_imports = true
 
 [tool.pyright]

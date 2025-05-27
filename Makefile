@@ -13,9 +13,11 @@ docs: # Build the documentation.
 docs-serve: # Serve the documention.
 	cd docs && mkdocs serve
 
-lock:  # Create the lock file and requirements file.
-	rm -f requirements.txt
-	uv pip compile pyproject.toml --python .venv/bin/python --output-file=requirements.txt  requirements.in
+lint:  # Lint the code with ruff.
+	.venv/bin/ruff check ./src ./tests
+
+lock:  # Create or update the requirements file.
+	uv lock
 
 .PHONY: help
 help: # Show help for each of the makefile recipes.
@@ -25,13 +27,11 @@ report:  # Report the python version and pip list.
 	.venv/bin/python --version
 	uv pip list -v
 
-test:  # Run the unit tests.
+test:  # Run tests.
 	.venv/bin/pytest ./tests --verbose --color=yes
-	.venv/bin/pytest --cov=nidavellir --cov-fail-under=80
+	.venv/bin/pytest --cov=src
 
 venv:  # Create the virtual environment.
 	uv venv .venv
-	uv pip install --python .venv/bin/python --requirements requirements.txt
+	uv sync 
 
-activate: # Activate the virtual environment.
-	. .venv/bin/activate

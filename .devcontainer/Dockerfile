@@ -5,12 +5,6 @@ FROM --platform=linux/amd64 mcr.microsoft.com/devcontainers/python:1-3.12-bullse
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh \
  && cp /root/.local/bin/uv /usr/local/bin/uv
 
-# Install LaTeX.
-RUN apt-get --quiet update \
- && apt-get install --assume-yes texlive latexmk \
- && apt-get clean \
- && rm -rf /var/lib/apt/lists/*
-
 # Add some labels so it looks nice in Github packages.
-LABEL org.opencontainers.image.source=https://github.com/earthroverprogram/nidavellir
-LABEL org.opencontainers.image.description="nidavellir image."
+LABEL org.opencontainers.image.source=https://github.com/earthroverprogram/scott-tracy
+LABEL org.opencontainers.image.description="scott-tracy image."
