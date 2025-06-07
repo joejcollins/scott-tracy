@@ -6,5 +6,5 @@ RUN curl -LsSf https://astral.sh/uv/install.sh | sh \
  && cp /root/.local/bin/uv /usr/local/bin/uv
 
 # Add some labels so it looks nice in Github packages.
-LABEL org.opencontainers.image.source=https://github.com/earthroverprogram/scott-tracy
+LABEL org.opencontainers.image.source=https://github.com/joejcollins/scott-tracy
 LABEL org.opencontainers.image.description="scott-tracy image."
