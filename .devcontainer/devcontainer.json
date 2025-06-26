@@ -2,7 +2,6 @@
 	"name": "scott-tracy: Python Template",
 	"image": "ghcr.io/joejcollins/scott-tracy:latest",
 	"features": {
-		"ghcr.io/devcontainers-contrib/features/starship:1": {}
 	},
 	"customizations": {
 		"vscode": {

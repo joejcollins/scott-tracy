@@ -18,7 +18,9 @@ def test_find_file_upwards_definitely_not_found() -> None:
     """Test that the file finder service does not find the file."""
     # ARRANGE
     # Ensure that the file can never be found.
-    file_finder = file_finder_service.FileFinderService(isfile=lambda path: False)
+    file_finder = file_finder_service.FileFinderService(
+        isfile=lambda path: False
+    )
     # ACT
     the_path = file_finder.find_file_upwards(filename="non_existent_file.txt")
     # ASSERT
@@ -28,7 +30,7 @@ def test_find_file_upwards_definitely_not_found() -> None:
 def test_find_file_upwards_in_current_directory() -> None:
     """Confirm that finder service finds a file upwards."""
     # ARRANGE
-    # Ensure that the file is found immediately and you don't actually look upwards.
+    # Ensure that the file is found immediately and you don't look upwards.
     file_finder = file_finder_service.FileFinderService(
         isfile=lambda path: True, abspath=lambda path: "/home/user/project"
     )
@@ -39,11 +41,11 @@ def test_find_file_upwards_in_current_directory() -> None:
 
 
 def test_file_found_in_a_parent_directory() -> None:
-    """Test that the file finder service finds the file in a parent directory."""
+    """Test that the file finder service finds the file in a parent."""
 
     # ARRANGE
     def mock_isfile(path):
-        """Find the file in a parent directory when you have gone up two levels."""
+        """Find the file in a parent when you have gone up two levels."""
         return path == "/home/user/setting.json"
 
     # ACT
@@ -62,7 +64,8 @@ def test_find_root_found() -> None:
     # ARRANGE
     # Ensure the root project file will be found.
     file_finder = file_finder_service.FileFinderService(
-        isfile=lambda path: True, abspath=lambda path: "/somewhere/on/the/file/system"
+        isfile=lambda path: True,
+        abspath=lambda path: "/somewhere/on/the/file/system",
     )
     # ACT
     the_root = file_finder.find_root()
