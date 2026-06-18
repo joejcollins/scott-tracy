@@ -9,12 +9,12 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
 ]
-requires-python = ">=3.12"
+requires-python = ">=3.14"
 dependencies = [
     "debugpy",
     "ipykernel",
     "ipympl",
-    "loguru",
+    "mkdocs-mermaid2-plugin",
     "mkdocs",
     "pre-commit",
     "python-dotenv",
@@ -22,8 +22,6 @@ dependencies = [
     "pytest-cov",
     "ruff",
     "sourcery",
-    "tqdm",
-    "types-tqdm",
 ]
 
 [project.urls]
@@ -43,13 +41,9 @@ line-length = 80
 [tool.uv]
 package = true
 
-[[tool.mypy.overrides]]
-module = ["scott_tracy.*"]
-follow_untyped_imports = true
-
 [tool.pyright]
 exclude = ["**/__pycache__"]
 reportMissingImports = true
 reportMissingTypeStubs = false
-pythonVersion = "3.12"
+pythonVersion = "3.14"
 pythonPlatform = "Linux"
